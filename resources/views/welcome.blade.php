@@ -64,8 +64,13 @@
             Sub-hero message, not too long and not too short. Make it just right!
           </p> --}}
 
-          <div class="bg-gray-900 opacity-75 w-full shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4">
-
+          <div class="flex items-center justify-between pt-4">
+            <a
+              class="bg-gradient-to-r from-purple-800 to-green-500 hover:from-pink-500 hover:to-green-500 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
+              href="{{ url('/client') }}"
+            >
+              Join Us
+            </a>
           </div>
         </div>
 
