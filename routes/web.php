@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\Client;
+use App\Livewire\Welcome;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,8 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::get('/',Welcome::class)->name('home');
 
 Route::get('/client', Client::class);

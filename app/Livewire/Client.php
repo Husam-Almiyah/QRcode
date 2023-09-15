@@ -26,8 +26,14 @@ class Client extends Component
         session()->flash('message', 'You have successfully joined us 😁');
         return redirect(route('home'));
     }
+
+    
     public function render()
     {
-        return view('livewire.client');
+        $clients = ModelsClient::latest()->get();
+
+        return view('livewire.client', [
+            'clients' => $clients,
+        ]);
     }
 }

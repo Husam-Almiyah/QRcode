@@ -79,6 +79,53 @@
           <img class="mx-auto w-full rounded-lg md:w-4/5 transform -rotate-6 transition hover:scale-105 duration-700 ease-in-out hover:rotate-6" src="{{ asset('assets/images/QR-Code.png') }}" />
         </div>
 
+        <div class="flex flex-col md:flex-row w-full gap-6 m-5">
+          <div class="col-lg-6 w-full max-w-md p-4 border rounded-lg shadow sm:p-8 bg-gray-800 border-gray-700">
+            <div class="flex items-center justify-between mb-4">
+                <h5 class="text-xl font-bold leading-none text-white">Latest Customers</h5>
+            </div>
+            <div class="flow-root">
+                  <ul role="list" class="divide-y divide-gray-700">
+                      <li class="py-3 sm:py-4">
+                          <div class="flex items-center space-x-4">
+                              <div class="flex-1 min-w-0">
+                                  <p class="text-sm font-medium truncate text-white">
+                                      Neil Sims
+                                  </p>
+                                  <p class="text-sm truncate text-gray-400">
+                                      email@windster.com
+                                  </p>
+                              </div>
+                              <div class="inline-flex items-center text-base font-semibold text-white">
+                                  $320
+                              </div>
+                          </div>
+                      </li>
+                  </ul>
+            </div>
+          </div>
+
+          
+          <div class="col-lg-6 w-full p-4 border rounded-lg shadow bg-gray-800 border-gray-700">
+            <div id="fullWidthTabContent">
+                <div class=" p-4 rounded-lg md:p-8 bg-gray-800" id="stats" role="tabpanel" aria-labelledby="stats-tab">
+                    <dl class="grid max-w-screen-xl grid-cols-2 gap-8 p-4 mx-auto sm:grid-cols-2 xl:grid-cols-2 text-white sm:p-8">
+                        <div class="flex flex-col items-center justify-center">
+                            <dt class="mb-2 text-3xl font-extrabold text-white">73M+</dt>
+                            <dd class="text-gray-400">Developers</dd>
+                        </div>
+                        <div class="flex flex-col items-center justify-center">
+                            <dt class="mb-2 text-3xl font-extrabold text-white">100M+</dt>
+                            <dd class="text-gray-400">Public repositories</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div wire:poll>
+          {{ $clients }}
+        </div>
         <!--Footer-->
         <div class="w-full pt-16 pb-6 text-sm text-center md:text-left fade-in">
           <a class="text-gray-500 no-underline hover:no-underline" href="#">&copy; App 2023</a>
